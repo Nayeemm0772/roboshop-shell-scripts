@@ -1,4 +1,5 @@
 LOG_FILE=/tmp/catalogue
+source common.sh
 
 echo  Setup NodeJS Repos
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${LOG_FILE}
