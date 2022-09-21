@@ -35,7 +35,7 @@ echo Download the schema and load it.
    cd /tmp &>>${LOG_FILE}
 
 echo extract schema file
-   unzip mongodb.zip &>>${LOG_FILE}
+   unzip -o mongodb.zip &>>${LOG_FILE}
    cd mongodb-main &>>${LOG_FILE}
 
 echo load catalogue schema
