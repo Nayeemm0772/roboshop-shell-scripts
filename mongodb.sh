@@ -29,11 +29,21 @@ echo restart the service
 echo Download the schema and load it.
 
    curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>${LOG_FILE}
+
+   StatusCheck $?
   
    cd /tmp &>>${LOG_FILE}
+
+echo extract schema file
    unzip mongodb.zip &>>${LOG_FILE}
    cd mongodb-main &>>${LOG_FILE}
+
+echo load catalogue schema
+
    mongo < catalogue.js &>>${LOG_FILE}
+  StatusCheck $?
+
+echo load users schema
    mongo < users.js &>>${LOG_FILE}
 
    StatusCheck $?
