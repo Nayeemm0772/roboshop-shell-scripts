@@ -1,4 +1,4 @@
-LOG_FILE=/tmp/catalogue
+LOG_FILE=/tmp/mongodb
 source common.sh
 
 echo setup MongoDB Repos.
@@ -14,7 +14,7 @@ echo  Install Mongo and start the Service.
 
   StatusCheck $?
 
-echo Update Listen IP address from 127.0.0.1 to 0.0.0.0 in config file
+echo Update Listen IP address from 127.0.0.1 to 0.0.0.0 in config file.
 
   sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>${LOG_FILE}
 
