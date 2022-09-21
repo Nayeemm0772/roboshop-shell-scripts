@@ -36,16 +36,19 @@ echo Download the schema and load it.
 
 echo extract schema file
    unzip -o mongodb.zip &>>${LOG_FILE}
+   StatusCheck $?
+
+echo unzippping mongodb main file
    cd mongodb-main &>>${LOG_FILE}
+   StatusCheck $?
 
 echo load catalogue schema
 
    mongo < catalogue.js &>>${LOG_FILE}
-  StatusCheck $?
+   StatusCheck $?
 
 echo load users schema
    mongo < users.js &>>${LOG_FILE}
-
    StatusCheck $?
 
   
