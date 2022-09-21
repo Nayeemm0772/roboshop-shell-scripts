@@ -1,4 +1,4 @@
-LOG_FILE=/tmp/catalogue
+LOG_FILE=/tmp/frontend
 source common.sh
 
 echo Install Nginx
@@ -15,7 +15,7 @@ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/fron
 
 StatusCheck $?
 
-echo Deploy the downloaded content in Nginx Default Location.
+echo Deploy the downloaded content in Nginx Default Location
 
 cd /usr/share/nginx/html &>>${LOG_FILE}
 rm -rf * &>>${LOG_FILE}
