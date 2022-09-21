@@ -1,5 +1,5 @@
 LOG_FILE=/tmp/catalogue
-echo Install Nginx &>>${LOG_FILE}
+echo Install Nginx
 
 yum install nginx -y &>>${LOG_FILE}
 systemctl enable nginx &>>${LOG_FILE}
