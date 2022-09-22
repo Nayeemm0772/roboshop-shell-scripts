@@ -21,21 +21,15 @@ echo  Download user Application Code
   curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip" &>>${LOG_FILE}
   StatusCheck $?
 
-cd /home/roboshop
-
-echo "Clean Old App Content"
-  rm -rf user &>>${LOG_FILE}
+ echo "Clean Old App Content"
+  cd /home/roboshop && rm -rf cart &>>${LOG_FILE}
   StatusCheck $?
 
-echo  extract the user application code
-  unzip /tmp/user.zip &>>${LOG_FILE}
+  echo "Extract cart Application Code"
+  unzip /tmp/cart.zip &>>${LOG_FILE}
   StatusCheck $?
 
-echo moving the user-main
-  mv user-main user &>>${LOG_FILE}
-  StatusCheck $?
-
-  cd /home/roboshop/cart
+  mv cart-main cart && cd /home/roboshop/cart
 
 echo installing the NodeJS Dependencies
   npm install &>>${LOG_FILE}
