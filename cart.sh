@@ -35,7 +35,7 @@ echo moving the user-main
   mv user-main user &>>${LOG_FILE}
   StatusCheck $?
 
-  cd cart
+  cd /home/roboshop/cart
 
 echo installing the NodeJS Dependencies
   npm install &>>${LOG_FILE}
