@@ -25,7 +25,7 @@ echo  Download user Application Code
   cd /home/roboshop && rm -rf cart &>>${LOG_FILE}
   StatusCheck $?
 
-  echo "Extract cart Application Code"
+  echo Extract cart Application Code
   unzip /tmp/cart.zip &>>${LOG_FILE}
   StatusCheck $?
 
