@@ -18,7 +18,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo  Download user Application Code
-  curl -s -L -o /tmp/user.zip "https://github.com/roboshop-devops-project/user/archive/main.zip" &>>${LOG_FILE}
+  curl -s -L -o /tmp/cart.zip "https://github.com/roboshop-devops-project/cart/archive/main.zip" &>>${LOG_FILE}
   StatusCheck $?
 
  echo "Clean Old App Content"
